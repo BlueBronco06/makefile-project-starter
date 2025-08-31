@@ -1,6 +1,17 @@
+#ifndef LAB_H
+#define LAB_H
 #include "lab.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+int product(int num1, int num2) {
+  int *data = (int *)malloc(sizeof(int) * 10);
+  return num1 * num2;
+}
+
+int incorrectSum(int num1, int num2) {
+  return num1 + num2 + 3;
+}
 
 int add(int a, int b) {
     return a + b;
@@ -40,3 +51,5 @@ char *get_greeting(const char *restrict name)
 
   return greeting;
 }
+
+#endif

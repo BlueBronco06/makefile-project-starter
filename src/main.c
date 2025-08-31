@@ -6,15 +6,24 @@
 #define main main_exclude
 #endif
 
+void leak(){
+    int *dataPtr = (int *)malloc(sizeof(int) * 10);
+}
 
 
 int main(void)
 {
+    int *nullPtr = NULL;
+    int value = *nullPtr;
+
     int result_add = add(5, 3);
     int result_subtract = subtract(5, 3);
     printf("Addition Result: %d\n", result_add);
     printf("Subtraction Result: %d\n", result_subtract);
     char *greeting = get_greeting("World");
+
+    leak();
+
     if (greeting) {
         printf("%s\n", greeting);
         free(greeting); // Free the allocated memory for the greeting

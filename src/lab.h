@@ -1,6 +1,9 @@
 #ifndef LAB_H
 #define LAB_H
 
+int product(int num1, int num2);
+int incorrectSum(int num1, int num2);
+
 /** * @brief Returns a greeting message.
  *
  * This function returns a string that contains a greeting message.
