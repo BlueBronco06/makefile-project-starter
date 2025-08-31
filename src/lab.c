@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 int product(int num1, int num2) {
-  int *data = (int *)malloc(sizeof(int) * 10);
+  // int *data = (int *)malloc(sizeof(int) * 10);
   return num1 * num2;
 }
 
